@@ -1,0 +1,136 @@
+.pistacho {
+  background: var(--color-cream);
+  padding: 110px 24px;
+  scroll-margin-top: var(--header-height);
+}
+
+.pistacho-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.pistacho-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(280px, 32vw, 440px);
+  aspect-ratio: 1;
+}
+
+.pistacho-plate {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 24px 50px rgba(74, 54, 32, 0.18);
+}
+
+.pistacho-frame {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pistacho-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+}
+
+.pistacho-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-10deg);
+  animation: badge-breathe 4s ease-in-out infinite;
+}
+
+.pistacho-badge span {
+  display: block;
+  width: 76px;
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+@keyframes badge-breathe {
+  0%,
+  100% {
+    transform: rotate(-10deg) scale(1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.045);
+  }
+}
+
+.pistacho-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.pistacho-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-orange);
+  margin-bottom: 16px;
+}
+
+.pistacho-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 1;
+  color: var(--color-brown);
+  letter-spacing: -0.01em;
+}
+
+.pistacho-description {
+  margin-top: 24px;
+  max-width: 480px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-brown);
+}
+
+.pistacho-actions {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .pistacho-inner {
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .pistacho-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pistacho-actions {
+    justify-content: center;
+  }
+}
