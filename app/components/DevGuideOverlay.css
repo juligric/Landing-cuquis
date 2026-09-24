@@ -1,0 +1,15 @@
+.dev-guide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.dev-guide-overlay img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}

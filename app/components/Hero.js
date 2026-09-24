@@ -16,7 +16,7 @@ export default function Hero() {
         />
         <img
           className="hero-cookie hero-cookie-tr"
-          src="/images/cookie-pistacho.png"
+          src="/images/cookie-pistacho-hero.png"
           alt=""
           aria-hidden="true"
           loading="lazy"
@@ -38,11 +38,9 @@ export default function Hero() {
 
         <div className="hero-content">
           <p className="hero-label">COOKIES ARTESANALES · CABA & NORDELTA</p>
-          <h1 className="hero-title">
-            <img src="/images/logo-cuquis.png" alt="Cuquis" />
-          </h1>
+          <h1 className="hero-title">Cuquis</h1>
           <p className="hero-description">
-            Hacemos cuquis artesanales, una por una, con recetas caseras y mucho amor. Horneamos como en casa, con
+            Hacemos cuquis artesanales una por una, con recetas caseras y mucho amor. Horneamos como en casa, con
             paciencia y dedicación.
           </p>
           <div className="hero-actions">

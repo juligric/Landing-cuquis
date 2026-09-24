@@ -31,15 +31,12 @@ export default function Pistacho() {
     <section id="pistacho" className="pistacho">
       <div className="pistacho-inner">
         <div className="pistacho-photo-wrap">
-          <div className="pistacho-plate" />
-          <div className="pistacho-frame">
-            <img
-              ref={photoRef}
-              className="pistacho-photo"
-              src="/images/cookie-pistacho.png"
-              alt="Cookie de pistacho"
-            />
-          </div>
+          <img
+            ref={photoRef}
+            className="pistacho-photo"
+            src="/images/cookie-pistacho.png"
+            alt="Cookie de pistacho"
+          />
           <div className="pistacho-badge">
             <span>SABOR DEL MES</span>
           </div>

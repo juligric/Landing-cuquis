@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <div className="header-inner">
         <a href="#hero" className="header-logo">
-          <img src="/images/logo-cuquis.png" alt="Cuquis" />
+          Cuquis
         </a>
 
         <div className="header-right">

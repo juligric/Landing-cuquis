@@ -1,16 +1,17 @@
-import { Baloo_2, Nunito } from "next/font/google";
+import { Bagel_Fat_One, Quicksand } from "next/font/google";
 import "./globals.css";
+import DevGuideOverlay from "./components/DevGuideOverlay";
 
-const baloo = Baloo_2({
-  variable: "--font-baloo",
+const bagelFatOne = Bagel_Fat_One({
+  variable: "--font-bagel",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: "400",
 });
 
-const nunito = Nunito({
-  variable: "--font-nunito",
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -20,8 +21,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${baloo.variable} ${nunito.variable}`}>
-      <body>{children}</body>
+    <html lang="es" className={`${bagelFatOne.variable} ${quicksand.variable}`}>
+      <body style={{ position: "relative" }}>
+        <DevGuideOverlay />
+        {children}
+      </body>
     </html>
   );
 }

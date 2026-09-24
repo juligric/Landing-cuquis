@@ -5,8 +5,8 @@
 }
 
 :root {
-  --color-orange: #e8592c;
-  --color-brown: #4a3620;
+  --color-orange: #ee5029;
+  --color-brown: #4a3818;
   --color-brown-dark: #3a2913;
   --color-cream: #ece0cc;
   --color-cream-light: #f4ead8;
@@ -14,8 +14,8 @@
   --color-tan: #b4a58c;
   --color-white: #ffffff;
 
-  --font-heading: var(--font-baloo), sans-serif;
-  --font-body: var(--font-nunito), sans-serif;
+  --font-heading: var(--font-bagel), sans-serif;
+  --font-body: var(--font-quicksand), sans-serif;
 
   --header-height: 84px;
 }
