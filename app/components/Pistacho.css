@@ -70,31 +70,43 @@
 .pistacho-content {
   flex: 1;
   min-width: 280px;
+  position: relative;
+  top: -100px;   /* sube todo */
+  right: 75px;   /* mueve todo a la izquierda */
 }
 
 .pistacho-label {
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--color-orange);
+  line-height: 1;
+  letter-spacing: 0.24em;
+  text-align: left;
+  color: var(--color-brown);
   margin-bottom: 16px;
+  position: relative;
+  top: 20px;
 }
 
 .pistacho-title {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 400;
+  font-size: clamp(4rem, 6vw, 6.5rem);
   line-height: 1;
   color: var(--color-brown);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
+  position: relative;
+  top: 10px;
 }
 
 .pistacho-description {
   margin-top: 24px;
-  max-width: 480px;
-  font-size: 1.15rem;
-  line-height: 1.6;
+  max-width: 545px;
+  font-weight: 600;
+  font-size: 1.23rem;
+  line-height: 1.58;
+  letter-spacing: 0;
   color: var(--color-brown);
+  text-align: left;
 }
 
 .pistacho-actions {
