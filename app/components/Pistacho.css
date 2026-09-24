@@ -32,10 +32,10 @@
 
 .pistacho-badge {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 118px;
-  height: 118px;
+  top: 90px;
+  right: 60px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: var(--color-orange);
   display: flex;
@@ -52,7 +52,7 @@
   color: var(--color-white);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.15;
   text-transform: uppercase;
 }
