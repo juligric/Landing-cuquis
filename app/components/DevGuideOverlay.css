@@ -1,13 +1,15 @@
 .dev-guide-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
+  height: 0;
+  overflow: visible;
   z-index: 9999;
   pointer-events: none;
 }
 
 .dev-guide-overlay img {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: auto;
