@@ -1,0 +1,126 @@
+.cajas {
+  background: var(--color-cream);
+  padding: 110px 24px 110px;
+  scroll-margin-top: var(--header-height);
+}
+
+.cajas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cajas-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(3rem, 7vw, 5rem);
+  color: var(--color-orange);
+  line-height: 1;
+  margin-bottom: 44px;
+}
+
+.cajas-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid var(--color-brown);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.cajas-item {
+  padding: 40px 32px;
+  border-right: 2px solid var(--color-brown);
+}
+
+.cajas-item:last-child {
+  border-right: none;
+}
+
+.cajas-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--color-orange);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.cajas-plus {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.cajas-item-title {
+  max-width: 119px;
+  font-weight: 700;
+  font-size: 1.38rem;
+  line-height: 1.58;
+  letter-spacing: 0;
+  color: var(--color-brown);
+  margin-bottom: 8px;
+}
+
+.cajas-item-desc {
+  max-width: 226px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.58;
+  letter-spacing: 0;
+  color: var(--color-brown);
+}
+
+.cajas-item-dark {
+  background: var(--color-brown);
+  border-right: none;
+}
+
+.cajas-item-dark .cajas-item-title {
+  color: var(--color-white);
+}
+
+.cajas-item-dark .cajas-item-desc {
+  color: var(--color-cream-light);
+}
+
+.cajas-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .cajas-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cajas-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .cajas-item:nth-child(1),
+  .cajas-item:nth-child(2) {
+    border-bottom: 2px solid var(--color-brown);
+  }
+}
+
+@media (max-width: 520px) {
+  .cajas-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .cajas-item {
+    border-right: none !important;
+    border-bottom: 2px solid var(--color-brown);
+  }
+
+  .cajas-item:last-child {
+    border-bottom: none;
+  }
+}
