@@ -37,11 +37,10 @@
   z-index: 3;
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: clamp(10rem, 20vw, 16rem);
+  font-size: clamp(3.5rem, 20vw, 16rem);
   line-height: 1;
   color: var(--color-orange);
   text-transform: uppercase;
-  margin-top: -75px; /* ajustá el valor */
   left: 10px;
 }
 
@@ -208,5 +207,12 @@
   .hero-cookie,
   .hero-banner-track {
     animation: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-title {
+    margin-top: -75px; /* ajustá el valor */
+    font-size: clamp(10rem, 20vw, 16rem);
   }
 }

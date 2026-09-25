@@ -19,8 +19,6 @@
   color: var(--color-orange);
   text-transform: uppercase;
   position: relative;
-  top: 20px; /* más negativo = más arriba */
-  left: 30px;
 }
 
 .footer-tagline {
@@ -28,12 +26,11 @@
   font-size: 0.95rem;
   color: var(--color-cream-light);
   position: relative;
-  left: 39px;
-  top: 20px;
 }
 
 .footer-col {
   min-width: 140px;
+  position: relative;
 }
 
 .footer-label {
@@ -52,7 +49,7 @@
 
 .footer-divider {
   max-width: 1200px;
-  margin: 120px auto 20px;
+  margin: 32px auto 20px;
   border: none;
   border-top: 1px solid rgba(244, 234, 216, 0.2);
 }
@@ -62,4 +59,32 @@
   font-size: 0.8rem;
   color: var(--color-cream-light);
   opacity: 0.6;
+}
+
+@media (min-width: 900px) {
+  .footer-logo {
+    top: 35px; /* más negativo = más arriba */
+    left: 5px;
+  }
+
+  .footer-tagline {
+    left: 15px;
+    top: 37px;
+  }
+
+  .footer-col {
+    top: 27px; /* baja las dos columnas */
+  }
+
+  .footer-col:nth-child(2) {
+    left: -175px; /* DÓNDE */
+  }
+
+  .footer-col:nth-child(3) {
+    left: -235px; /* CONTACTO */
+  }
+
+  .footer-divider {
+    margin: 120px auto 20px;
+  }
 }

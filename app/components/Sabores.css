@@ -15,7 +15,7 @@
   justify-content: flex-start; /* antes: space-between */
   flex-wrap: wrap;
   gap: 5px 10px; /* el 40px es la distancia entre los dos */
-  margin-bottom: -170px;
+  margin-bottom: 32px;
 }
 
 .sabores-title {
@@ -25,7 +25,6 @@
   color: var(--color-orange);
   line-height: 1;
   position: relative;
-  top: -215px;
 }
 
 .sabores-subtitle {
@@ -34,7 +33,6 @@
   line-height: 1.5;
   color: var(--color-brown);
   position: relative;
-  top: -215px;
 }
 
 .sabores-grid {
@@ -125,5 +123,16 @@
 @media (max-width: 520px) {
   .sabores-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .sabores-header {
+    margin-bottom: -170px;
+  }
+
+  .sabores-title,
+  .sabores-subtitle {
+    top: -215px;
   }
 }

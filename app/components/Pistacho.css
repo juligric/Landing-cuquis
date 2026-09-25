@@ -16,10 +16,8 @@
 .pistacho-photo-wrap {
   position: relative;
   flex-shrink: 0;
-  width: clamp(630px, 150vw, 630px);
+  width: min(630px, 85vw);
   aspect-ratio: 1;
-  left: -30px;
-  top: -90px;
 }
 
 .pistacho-photo {
@@ -71,8 +69,6 @@
   flex: 1;
   min-width: 280px;
   position: relative;
-  top: -100px;   /* sube todo */
-  right: 75px;   /* mueve todo a la izquierda */
 }
 
 .pistacho-label {
@@ -131,5 +127,18 @@
 
   .pistacho-actions {
     justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .pistacho-photo-wrap {
+    width: 630px;
+    left: -30px;
+    top: -90px;
+  }
+
+  .pistacho-content {
+    top: -100px;
+    right: 75px;
   }
 }

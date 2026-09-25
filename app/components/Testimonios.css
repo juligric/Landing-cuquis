@@ -19,7 +19,6 @@
   line-height: 1;
   margin-bottom: 44px;
   position: relative;
-  left: -100px;
 }
 
 .testimonios-marquee {
@@ -148,5 +147,11 @@
 @media (prefers-reduced-motion: reduce) {
   .testimonios-track {
     animation: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .testimonios-title {
+    left: -100px;
   }
 }

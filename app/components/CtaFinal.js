@@ -3,8 +3,8 @@ import "./CtaFinal.css";
 export default function CtaFinal() {
   return (
     <section id="armamos" className="cta-final">
-      <div className="cta-decor cta-decor-left" />
-      <div className="cta-decor cta-decor-right" />
+      <img className="cta-decor cta-decor-left" src="/images/cookie-caramelo.png" alt="" aria-hidden="true" />
+      <img className="cta-decor cta-decor-right" src="/images/cookie-red-velvet.png" alt="" aria-hidden="true" />
 
       <div className="cta-final-inner">
         <h2 className="cta-final-title">¿Armamos tu caja?</h2>
