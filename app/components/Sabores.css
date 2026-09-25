@@ -38,7 +38,7 @@
 .sabores-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 50px 35px; /* filas | columnas */
 }
 
 .sabor-card {
@@ -56,7 +56,7 @@
 
 .sabor-card:hover {
   transform: scale(1.05) rotate(-1.5deg);
-  box-shadow: 0 18px 32px rgba(74, 56, 24, 0.2);
+  box-shadow: 10px 15px 0 var(--color-brown); /* derecha, abajo, blur 0, color */
   z-index: 2;
 }
 
@@ -117,6 +117,14 @@
 @media (max-width: 900px) {
   .sabores-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sabor-card {
+    aspect-ratio: auto;
+  }
+
+  .sabor-card-cta {
+    grid-column: 1 / -1;
   }
 }
 
