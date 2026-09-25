@@ -170,7 +170,11 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
+  .hero-stage {
+    padding-top: 70px;
+  }
+
   .hero-cookie-tl,
   .hero-cookie-br {
     width: 110px;
@@ -194,11 +198,41 @@
 
   .hero-cookie-bl,
   .hero-cookie-br {
-    bottom: 30px;
+    bottom: 0;
+  }
+
+  .hero-cookie-tl {
+    left: 0;
+  }
+
+  .hero-cookie-tr {
+    right: 0;
+  }
+
+  .hero-cookie-bl {
+    left: 4px;
+  }
+
+  .hero-cookie-br {
+    right: 4px;
+  }
+
+  .hero-label {
+    max-width: min(320px, 70vw);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    padding: 30px;
+    max-width: 340px;
+    position: relative;
+    top: 20px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .hero-cookie {
     display: none;
   }
