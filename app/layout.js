@@ -1,5 +1,6 @@
 import { Bagel_Fat_One, Quicksand } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const bagelFatOne = Bagel_Fat_One({
   variable: "--font-bagel",
@@ -21,7 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${bagelFatOne.variable} ${quicksand.variable}`}>
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

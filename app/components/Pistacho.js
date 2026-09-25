@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./Pistacho.css";
 
 export default function Pistacho() {
+  const { t } = useLanguage();
   const photoRef = useRef(null);
   const lastScrollY = useRef(0);
   const rotation = useRef(0);
@@ -38,17 +40,14 @@ export default function Pistacho() {
             alt="Cookie de pistacho"
           />
           <div className="pistacho-badge">
-            <span>SABOR DEL MES</span>
+            <span>{t.pistacho.badge}</span>
           </div>
         </div>
 
         <div className="pistacho-content">
-          <p className="pistacho-label">EDICIÓN LIMITADA</p>
-          <h2 className="pistacho-title">Pistacho</h2>
-          <p className="pistacho-description">
-            Masa de manteca con pistacho molido, trozos de chocolate blanco y un toque de sal. La horneamos en tandas
-            chicas y se agota rápido.
-          </p>
+          <p className="pistacho-label">{t.pistacho.label}</p>
+          <h2 className="pistacho-title">{t.pistacho.title}</h2>
+          <p className="pistacho-description">{t.pistacho.description}</p>
           <div className="pistacho-actions">
             <a
               className="btn btn-dark"
@@ -56,7 +55,7 @@ export default function Pistacho() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Quiero una
+              {t.pistacho.ctaPrimary}
             </a>
             <a
               className="btn btn-outline"
@@ -64,7 +63,7 @@ export default function Pistacho() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              @__cuquis
+              {t.pistacho.ctaSecondary}
             </a>
           </div>
         </div>

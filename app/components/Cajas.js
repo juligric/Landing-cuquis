@@ -1,41 +1,36 @@
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
 import "./Cajas.css";
 
 export default function Cajas() {
+  const { t } = useLanguage();
+
   return (
     <section id="cajas" className="cajas">
       <div className="cajas-inner">
-        <h2 className="cajas-title">Cajas y combos</h2>
+        <h2 className="cajas-title">{t.cajas.title}</h2>
 
         <div className="cajas-bar">
-          <div className="cajas-item">
-            <span className="cajas-number">01</span>
-            <h3 className="cajas-item-title">Por unidad</h3>
-            <p className="cajas-item-desc">Elegís el sabor que quieras, sin mínimo.</p>
-          </div>
-
-          <div className="cajas-item">
-            <span className="cajas-number">06</span>
-            <h3 className="cajas-item-title">Caja de 6</h3>
-            <p className="cajas-item-desc">Combinalas de la forma que mas quieras.</p>
-          </div>
-
-          <div className="cajas-item">
-            <span className="cajas-number">12</span>
-            <h3 className="cajas-item-title">Caja de 12</h3>
-            <p className="cajas-item-desc">Para compartir con quien quieras.</p>
-          </div>
+          {t.cajas.items.map((item) => (
+            <div className="cajas-item" key={item.number}>
+              <span className="cajas-number">{item.number}</span>
+              <h3 className="cajas-item-title">{item.title}</h3>
+              <p className="cajas-item-desc">{item.desc}</p>
+            </div>
+          ))}
 
           <div className="cajas-item cajas-item-dark">
             <span className="cajas-plus">+</span>
-            <h3 className="cajas-item-title">Catering</h3>
-            <p className="cajas-item-desc">Eventos y pedidos grandes, armados a medida.</p>
+            <h3 className="cajas-item-title">{t.cajas.catering.title}</h3>
+            <p className="cajas-item-desc">{t.cajas.catering.desc}</p>
             <a
               className="cajas-link"
               href="https://wa.me/5491156433282"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Pedir presupuesto
+              {t.cajas.catering.cta}
             </a>
           </div>
         </div>

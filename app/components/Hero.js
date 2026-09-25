@@ -1,9 +1,12 @@
+"use client";
+
+import { useLanguage } from "../context/LanguageContext";
 import "./Hero.css";
 
-const BANNER_ITEMS = ["UNA POR UNA", "RECETAS CASERAS", "SIN PROCESOS INDUSTRIALES", "RECIÉN HORNEADAS"];
-const bannerItems = [...BANNER_ITEMS, ...BANNER_ITEMS];
-
 export default function Hero() {
+  const { t } = useLanguage();
+  const bannerItems = [...t.hero.banner, ...t.hero.banner];
+
   return (
     <section id="hero" className="hero">
       <div className="hero-stage">
@@ -37,12 +40,9 @@ export default function Hero() {
         />
 
         <div className="hero-content">
-          <p className="hero-label">COOKIES ARTESANALES · CABA & NORDELTA</p>
+          <p className="hero-label">{t.hero.label}</p>
           <h1 className="hero-title">Cuquis</h1>
-          <p className="hero-description">
-            Hacemos cuquis artesanales una por una, con recetas caseras y mucho amor. Horneamos como en casa, con
-            paciencia y dedicación.
-          </p>
+          <p className="hero-description">{t.hero.description}</p>
           <div className="hero-actions">
             <a
               className="btn btn-primary"
@@ -50,10 +50,10 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Hacé tu pedido
+              {t.hero.ctaPrimary}
             </a>
             <a className="btn btn-outline" href="#sabores">
-              Ver los sabores
+              {t.hero.ctaSecondary}
             </a>
           </div>
         </div>
