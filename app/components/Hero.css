@@ -137,7 +137,8 @@
   border-bottom: 2px solid var(--color-brown);
   padding: 10px 0;
   position: relative;
-  top: -8px;
+  margin-top: 50px;
+  z-index: 4;
 }
 
 .hero-banner-track {
